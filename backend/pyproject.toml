@@ -1,0 +1,115 @@
+[project]
+name = "local-first-chatbot-backend"
+version = "1.0.0"
+description = "Backend API for local first chatbot with RAG capabilities"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Core FastAPI dependencies
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic==2.5.0",
+    "pydantic-settings",
+
+    # Database and ORM
+    "sqlalchemy",
+    "alembic",
+
+    # Vector database for embeddings
+    "chromadb",
+
+    # AI/ML dependencies
+    "langchain",
+    "langchain-community",
+    "langchain-core",
+    "langchain-text-splitters",
+    "sentence-transformers",
+
+    # Multi-modal processing
+    "transformers",
+    "torch",
+    "Pillow",
+    "openai-whisper",
+
+    # File processing
+    "python-multipart",
+    "aiofiles",
+
+    # Utilities
+    "python-dotenv",
+    "httpx",
+    "asyncio",
+
+    # Development dependencies
+    "pytest",
+    "pytest-asyncio",
+    "black",
+    "ruff",
+    "pre-commit"
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # Pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501", # line too long, handled by black
+    "B008", # do not perform function calls in argument defaults
+    "C901", # too complex
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["backend"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = ["chromadb.*", "sentence_transformers.*", "langchain.*"]
+ignore_missing_imports = true
