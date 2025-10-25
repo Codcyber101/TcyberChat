@@ -1,0 +1,59 @@
+# Core FastAPI dependencies
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Database and ORM
+sqlalchemy
+alembic
+
+# Vector database for embeddings
+chromadb
+
+# AI/ML dependencies
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+sentence-transformers
+ollama
+google-generativeai
+openai
+
+# Streaming and async
+sse-starlette
+
+# LangChain memory and conversation management
+langchain-experimental
+
+# Multi-modal processing
+transformers
+torch
+Pillow
+openai-whisper
+
+# File processing
+python-multipart
+aiofiles
+pypdf
+pymupdf
+python-docx
+pytesseract
+opencv-python
+# File processing
+python-multipart
+aiofiles
+pymupdf
+
+# Utilities
+python-dotenv
+httpx
+asyncio
+
+# Development dependencies
+pytest
+pytest-asyncio
+black
+ruff
+pre-commit
