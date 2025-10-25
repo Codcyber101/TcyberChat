@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dylib
+
+# Distribution / packaging
+build/
+dist/
+eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.nox/
+.coverage
+.cache
+.pytest_cache/
+coverage.xml
+htmlcov/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs and runtime data
+logs/
+backend/logs/
+*.log
+
+# SQLite and DB artifacts
+*.sqlite3
+*.db
+data/
+backend/data/
+backend/data/chroma_db/
+backend/data/chroma_db/chroma.sqlite3
+
+# Chroma / vectorstore persistence
+chroma_db/
+
+# Uploads and generated files
+uploads/
+backend/uploads/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Secrets and environment
+.env
+.env.*
+secrets.json
+
+# Node
+node_modules/
+.next/
+out/
+
+# Editor specific
+*.sublime-workspace
+
+# Python compiled C extensions
+*.so
+
+# Node/npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python type checker cache
+.mypy_cache/
+
+# Build / bundler caches
+.parcel-cache/
+.cache/
+
+# Terraform / infra artifacts
+.terraform/
+terraform.tfstate*
+
+# Per-project virtual envs
+backend/.venv/
+frontend/.venv/
+
+# Editor temp files
+*~
